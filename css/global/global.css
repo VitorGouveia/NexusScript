@@ -3,14 +3,16 @@
 @import url("./_reset.css");
 @import url("./_fonts.css");
 @import url("../themes/light.css");
+@import url("../themes/dark.css");
 
 :root {
   --ff-body: "Inter", sans-serif;
+  --width-90: min(90vw, 1200px);
 }
 
 body {
   font-family: var(--ff-body);
-  background: var(--body-bg-color);
+  background: var(--body-bg);
 }
 
 .sr-only {
@@ -23,4 +25,35 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+.container {
+  width: var(--width-90);
+  margin: auto;
+}
+
+input,
+textarea,
+button,
+select {
+  cursor: pointer;
+
+  padding: 1rem 2rem;
+
+  border-radius: 30px;
+
+  transition: background 200ms;
+}
+
+button {
+  font-weight: bold;
+}
+
+button[data-action="cta"] {
+  color: var(--foreground);
+  background: var(--accent);
+}
+
+button[data-action="cta"]:hover {
+  background: var(--accent-hover);
 }

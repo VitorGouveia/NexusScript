@@ -5,6 +5,7 @@ const staticAssets = [
     "../css/global/_reset.css",
     "../css/global/global.css",
     "../css/themes/light.css",
+    "../css/themes/dark.css",
     "../css/index.css",
     "../js/index.js",
     "./manifest.json",
