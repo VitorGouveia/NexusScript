@@ -3,19 +3,21 @@
   --body-bg-light: #1b1b30;
 
   --foreground: #fff;
+  --foreground-bg: #0f0f1b;
 
   --accent: #2E26D9;
+  --accent-light: #5850e8;
   --accent-hover: #231caa;
+
+  --card-income: #1b1b30;    
+  --card-expense: #c52929;
+  --card-total: #49aa26;
   
   --dark-blue: #363f5f;
   --green: #49aa26;
   --light-green: #3dd705;
   --red: #e92929;
   --header-bg: #2d4a22;
-  --card-income: #fff;    
-  --card-text: #363f5f;
-  --card-minus: #c52929;
-  --card-total: #49aa26;
   --modal-bg: #fff;
   --select-bg: #e1e1e6;
 }

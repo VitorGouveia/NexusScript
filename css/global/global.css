@@ -69,4 +69,7 @@ button[data-action="cta"]:hover {
   color: transparent;
   background: transparent;
   margin: 0;
+
+  display: grid;
+  place-items: center;
 }
