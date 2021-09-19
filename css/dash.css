@@ -15,8 +15,6 @@
 
   grid-template-columns: 100%;  
   grid-template-rows: min-content auto;
-
-  background: var(--body-bg);
 }
 
 header {
@@ -59,14 +57,11 @@ main {
   grid-template-areas:
     "card card card"
     "invest invest invest"
-    "ad ad ."
     "transactions transactions transactions"
   ;
 
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  
-  background: var(--foreground-bg);
+  grid-template-rows: min-content; 
 }
 
 #cards {
@@ -110,16 +105,16 @@ main {
 
   margin-bottom: 1rem;
 
-  font-size: 1.5rem;
+  font-size: clamp(0.4rem, 4vw, 1.5rem);
 }
 
 .card img {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: clamp(0.4rem, 4vw, 1.5rem);
+  height: clamp(0.4rem, 4vw, 1.5rem);
 }
 
 .card p {
-  font-size: 30px;
+  font-size: clamp(0.75rem, 4vw, 1.9rem);
 }
 
 #invest {
@@ -128,9 +123,11 @@ main {
   width: min(100%, 800px);
   margin: auto;
 
+  --card-size: clamp(100px, 10vw, 140px);
+
   display: grid;
-  grid-template-columns: repeat(4, 140px);
-  grid-template-rows: 140px;
+  grid-template-columns: repeat(4, var(--card-size));
+  grid-template-rows: var(--card-size);
 
   align-items: center;
   justify-content: space-between;
@@ -158,14 +155,101 @@ main {
   border-color: var(--accent-light);
 }
 
-#ad {
-  grid-area: ad;
-  background: paleturquoise;
+#transactions {
+  grid-area: transactions;
+  
+  width: min(100%, 800px);
+  height: 100%;
+
+  margin: auto;
+  
+  padding: 1rem;
+
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 1rem;
+}
+
+#transactions h3 {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+#transactions h3 span {
+  color: var(--accent-light);
+}
+
+#transactions ul {
+  list-style: none;
+
+  width: 100%;
+
+  /* box shadow */
+  border-radius: 0.25rem;
+  background: var(--card-income);
+  
+  display: flex;
+  flex-direction: column;
+  
+  row-gap: 1rem;
+  padding: 1rem 2rem;
+}
+
+#transactions ul li {
+  width: 100%;
+
+  margin: auto;
+
+  display: grid;
+  place-items: flex-start;
+  align-items: center;
+  grid-template-areas:
+    "img title price"
+    "img type  date"
+  ;
+
+  grid-template-columns: min-content 2fr 1fr;
+  grid-template-rows: min-content;
+
+  column-gap: 1rem;
+
+  padding: 1rem 0;
+
+  border-bottom: 1px solid #44444458;
+}
+
+#transactions ul li img {
+  grid-area: img;
+
+  padding: 0.6rem;
+  background: var(--body-bg);
+
+  border-radius: 0.4rem;
 }
 
 #transactions {
-  grid-area: transactions;
-  background: papayawhip;
+  font-size: clamp(1rem, 1vw, 2rem);
+}
+
+#transactions ul li h6 {
+  font-size: inherit;
+}
+
+#transactions ul li p {
+  font-size: inherit;
+  color: #E6492D;
+}
+
+#transactions ul li small {
+  font-size: inherit;
+  color: #999999;
 }
 
 @media (max-width: 1200px) {
@@ -199,7 +283,7 @@ main {
 
   .card.income {
     grid-area: income;
-  }
+ }
 
   .card.expense {
     grid-area: expense;
@@ -224,8 +308,8 @@ main {
   #invest {
     display: grid;
 
-    grid-template-columns: repeat(2, 140px);
-    grid-template-rows: repeat(2, 140px);
+    grid-template-columns: repeat(2, var(--card-size));
+    grid-template-rows: repeat(2, var(--card-size));
 
     align-items: center;
     justify-content: center;
@@ -248,8 +332,8 @@ main {
   #invest {
     display: grid;
 
-    grid-template-columns: repeat(1, 140px);
-    grid-template-rows: repeat(4, 140px);
+    grid-template-columns: repeat(1, var(--card-size));
+    grid-template-rows: repeat(4, var(--card-size));
 
     align-items: center;
     justify-content: center;

@@ -2,8 +2,6 @@ const $ = document.querySelector.bind(document)
 
 const arrowDown = document.querySelector(".arrowDown")
 
-feather.replace()
-
 document.addEventListener("DOMContentLoaded", () => {
   if("serviceWorker" in navigator) {
     navigator.serviceWorker.register("../pwa/sw.js")
