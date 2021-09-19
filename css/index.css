@@ -10,7 +10,8 @@
   grid-template-areas: 
     ". . ."
     ". content ."
-    ". . ."
+    ". more ."
+    ". features ."
   ;
 
   grid-template-columns: auto 90% auto;
@@ -20,15 +21,13 @@
   background: var(--body-bg);
 }
 
-@media (max-width: 768px) {
-  .container {
-    grid-template-areas: 
-      "content"
-    ;
+.more {
+  grid-area: more;
+}
 
-    grid-template-columns: 100%;
-    grid-template-rows: 100%;
-  }
+.more img {
+  width: clamp(2rem, 4vmax, 4rem);
+  cursor: pointer;
 }
 
 section {
@@ -74,7 +73,7 @@ header span {
   color: white;
 }
 
-img {
+section img {
   width: clamp(1rem, 2vmax, 10rem);
   height: auto;
 }
@@ -98,6 +97,86 @@ main article h1 {
   margin-bottom: 1rem;
 }
 
+main button {
+  position: relative;
+}
+
+main button:hover::after {
+  background: var(--accent-hover);
+}
+
+main button::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  bottom: -1rem;
+
+  width: 2.250rem;
+  height: 0.2rem;
+
+  background: var(--accent);
+
+  border-radius: 12px;
+  transition: background 200ms;
+}
+
 aside {
   grid-area: carousel;
+}
+
+#features {
+  grid-area: features;
+
+  width: 100%;
+
+  padding: clamp(1rem, 2vmax, 6rem) calc(clamp(1rem, 2vmax, 6rem) * 2);
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-areas: 
+      "content"
+      "features"
+    ;
+
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+  }
+
+  .more {
+    position: absolute;
+    bottom: 1rem;
+  }
+
+  section {
+    grid-template-areas: 
+      ". header ."
+      "carousel carousel carousel"
+      "main main main"
+    ;
+
+    border-radius: 0;
+    border-end-start-radius: 2rem;
+    border-end-end-radius: 2rem;
+    
+    grid-template-rows: min-content 1fr 2fr;
+  }
+
+  main {
+    width: auto;
+    height: auto;
+  }
+
+  main button {
+    margin-top: 3rem;
+  }
 }

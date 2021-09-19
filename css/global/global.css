@@ -5,9 +5,15 @@
 @import url("../themes/light.css");
 @import url("../themes/dark.css");
 
+@import url("../animations/arrow.css");
+
 :root {
   --ff-body: "Inter", sans-serif;
   --width-90: min(90vw, 1200px);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -56,4 +62,11 @@ button[data-action="cta"] {
 
 button[data-action="cta"]:hover {
   background: var(--accent-hover);
+}
+
+[data-reset] {
+  padding: 0;
+  color: transparent;
+  background: transparent;
+  margin: 0;
 }

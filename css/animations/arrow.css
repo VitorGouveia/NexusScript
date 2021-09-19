@@ -1,0 +1,15 @@
+.go-down {
+  animation: GoDown 1200ms infinite;
+}
+
+@keyframes GoDown {
+  0%, 100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  90% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
