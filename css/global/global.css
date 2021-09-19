@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600;700;800;900&display=swap');
+
+@import url("./_reset.css");
+@import url("./_fonts.css");
+@import url("../themes/light.css");
+
+:root {
+  --ff-body: "Inter", sans-serif;
+}
+
+body {
+  font-family: var(--ff-body);
+  background: var(--body-bg-color);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

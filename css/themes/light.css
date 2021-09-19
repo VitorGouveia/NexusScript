@@ -1,0 +1,14 @@
+.light {
+  --dark-blue: #363f5f;
+  --green: #49aa26;
+  --light-green: #3dd705;
+  --red: #e92929;
+  --body-bg-color: #f0f2f5;
+  --header-bg: #2d4a22;
+  --card-income: #fff;    
+  --card-text: #363f5f;
+  --card-minus: #c52929;
+  --card-total: #49aa26;
+  --modal-bg: #fff;
+  --select-bg: #e1e1e6;
+}
