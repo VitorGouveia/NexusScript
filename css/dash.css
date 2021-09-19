@@ -146,6 +146,40 @@ main {
   }
 }
 
+@media (max-width: 1000px) {
+  #cards {
+    display: grid;
+    grid-template-areas:
+      "income expense"
+      "total total"
+    ;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    place-items: center;
+
+    gap: 1rem;
+  }
+
+  .card {
+    width: min(100%, 500px);
+  }
+
+  .card.income {
+    grid-area: income;
+  }
+
+  .card.expense {
+    grid-area: expense;
+  }
+
+  .card.total {
+    width: 100%;
+    grid-area: total;
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     grid-template-areas: 
@@ -155,14 +189,16 @@ main {
 
     grid-template-columns: 100%;
   }
+}
 
+@media (max-width: 500px) {
   #cards {
-    flex-direction: column;
-    
-    row-gap: 1rem;
-  }
+    grid-template-areas:
+      "income"
+      "expense"
+      "total"
+    ;
 
-  .card {
-    width: min(100%, 500px);
+    grid-template-columns: 100%;
   }
 }
