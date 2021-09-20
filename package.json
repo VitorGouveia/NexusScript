@@ -4,5 +4,16 @@
   "description": "InvestHub allows for you to have full control over your finances",
   "author": "Vitor Neves Gomes Gouveia <vitor.gouveia@aluno.etecjrm.com.br>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "scripts": {
+    "commit": "cz"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
