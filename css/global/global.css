@@ -2,11 +2,12 @@
 
 @import url("./_reset.css");
 @import url("./_fonts.css");
+@import url("./_modal.css");
 @import url("../themes/light.css");
 @import url("../themes/dark.css");
 
 @import url("../animations/arrow.css");
-@import url("../modal/settings.css");
+@import url("../animations/modal.css");
 
 :root {
   --ff-body: "Inter", sans-serif;
@@ -132,4 +133,8 @@ button[data-action="cta"]:hover {
   padding: clamp(1rem, 3vw, 2.4rem);
 
   background: var(--modal-bg);
+}
+
+input {
+  background: var(--input-bg);
 }

@@ -1,14 +1,12 @@
-import { Theme } from "./theme.js"
+import { Theme } from "../theme.js"
 
 const theme = new Theme("dark")
-console.log(theme)
-const $ = document.querySelector.bind(document)
 
-const settingsButton = $("#settings")
-const settingsModal = $(".settings-modal")
-const settingsModalCancel = $('.settings-modal button[data-action="cancel"]')
-const settingsModalConfirm = $('.settings-modal button[data-action="confirm"]')
-const settingsModalSelect = $('.settings-modal select')
+const settingsButton = document.querySelector("#settings")
+const settingsModal = document.querySelector(".settings-modal")
+const settingsModalCancel = document.querySelector('.settings-modal button[data-action="cancel"]')
+const settingsModalConfirm = document.querySelector('.settings-modal button[data-action="confirm"]')
+const settingsModalSelect = document.querySelector('.settings-modal select')
 
 const showModal = () => {
   settingsModal.classList.remove("popOut")

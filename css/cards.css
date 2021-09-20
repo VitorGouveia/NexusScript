@@ -1,5 +1,8 @@
 @import url("./global/global.css");
 
+@import url("./modal/settings.css");
+@import url("./modal/cards.css");
+
 .container {
   width: min(100%, 1200px);
   height: 100vh;
@@ -31,7 +34,7 @@ header {
   align-items: center;
   justify-content: space-between;
 
-  color: #fff;
+  color: var(--foreground);
 }
 
 header h4 {
@@ -67,7 +70,7 @@ main {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: min-content auto;
 
-  color: #fff;
+  color: var(--foreground);
 
   place-items: center;
 
