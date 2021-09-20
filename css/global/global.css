@@ -73,3 +73,35 @@ button[data-action="cta"]:hover {
   display: grid;
   place-items: center;
 }
+
+.fadeOut {
+  animation: fadeOut 400ms ease forwards !important;
+}
+
+.fadeIn {
+  animation: fadeIn 400ms ease forwards !important;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  to {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
