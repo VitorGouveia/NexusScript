@@ -23,6 +23,10 @@ body {
   background: var(--body-bg);
 }
 
+* {
+  transition: all 200ms;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

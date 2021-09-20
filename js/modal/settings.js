@@ -1,4 +1,4 @@
-import { Theme } from "../theme.js"
+import { Theme } from "../theme/theme.js"
 
 const theme = new Theme("dark")
 
