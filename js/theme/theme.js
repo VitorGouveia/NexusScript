@@ -5,6 +5,10 @@ export class Theme {
   currentTheme = this.defaultTheme
 
   constructor(theme) {
+    if(!theme) {
+      this.setTheme(document.body.setAttribute("data-theme", localStorage.getItem("theme")))
+    }
+    
     this.setTheme(theme)
   }
   
@@ -24,4 +28,13 @@ export class Theme {
     localStorage.setItem("theme", this.currentTheme)
     document.body.setAttribute("data-theme", this.currentTheme)
   }
+}
+
+
+export const setThemeOnInitalLoad = () => {
+  const theme = new Theme()
+  
+  window.addEventListener("storage", event => {
+    theme.setTheme(event.newValue)
+  })
 }
