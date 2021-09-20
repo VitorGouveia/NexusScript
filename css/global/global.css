@@ -129,7 +129,7 @@ button[data-action="cta"]:hover {
 }
 
 .modal {
-  padding: 2.4rem;
+  padding: clamp(1rem, 3vw, 2.4rem);
 
   background: var(--modal-bg);
 }

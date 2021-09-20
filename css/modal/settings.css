@@ -7,7 +7,7 @@
 }
 
 .modal {
-  width: 40%;
+  width: min(80%, 500px);
 
   display: flex;
   flex-direction: column;
@@ -25,24 +25,32 @@
 
 .modal section {
   width: 100%;
-
+  
   display: flex;
   flex-direction: column;
-
+  
   align-items: flex-start;
   justify-content: space-between;
 }
 
+h2, section summary {
+  font-size: clamp(0.2rem, 1.2vmax, 2rem);
+  margin-bottom: 1rem;
+}
+
 .input-wrapper {
-  width: 80%;
+  width: min(80%, 300px);
 
   margin: auto;
-
   
   display: flex;
   
   align-items: center;
   justify-content: space-between;
+}
+
+.input-wrapper label, select {
+  font-size: clamp(0.6rem, 1vw, 1.4rem);
 }
 
 select {
@@ -61,9 +69,12 @@ select {
 
   align-items: center;
   justify-content: space-around;
+
+  font-size: clamp(0.5rem, 1vw, 1.8rem);
 }
 
 footer button {
+  font-size: inherit;
   color: #fff;
 }
 
@@ -110,5 +121,21 @@ footer button[data-action="confirm"]:focus {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-12px);
+  }
+}
+
+@media (max-width: 475px) {
+  footer {
+    flex-direction: column;
+    row-gap: 0.8rem;
+  }
+
+  footer button {
+    width: 100%;
+  }
+
+  .input-wrapper {
+    flex-direction: column;
+    row-gap: 0.5rem;
   }
 }
