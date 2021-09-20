@@ -7,7 +7,6 @@ links.forEach(link => {
     
     document.body.classList.remove("fadeIn")
     document.body.classList.add("fadeOut")
-    
-    window.location.href = link.hrefgit 
+    window.location.href = link.href 
   })
 })
