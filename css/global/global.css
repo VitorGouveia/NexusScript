@@ -6,6 +6,7 @@
 @import url("../themes/dark.css");
 
 @import url("../animations/arrow.css");
+@import url("../modal/settings.css");
 
 :root {
   --ff-body: "Inter", sans-serif;
@@ -44,9 +45,7 @@ button,
 select {
   cursor: pointer;
 
-  padding: 1rem 2rem;
-
-  border-radius: 30px;
+  padding: 0.5rem 1rem;
 
   transition: background 200ms;
 }
@@ -104,4 +103,33 @@ button[data-action="cta"]:hover {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+
+  background: var(--overlay-bg);
+
+  position: fixed;
+  top: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  padding: 2.4rem;
+
+  background: var(--modal-bg);
 }

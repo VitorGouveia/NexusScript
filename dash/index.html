@@ -97,44 +97,47 @@
 
         <ul>
           <li>
-            <img src="../assets/expense.svg" alt="">
-            <h6>Dropbox</h6>
-            <p>R$ 144</p>
-            <small>sass</small>
-            <small>sass</small>
-          </li>
-          <li>
-            <img src="../assets/expense.svg" alt="">
-            <h6>Dropbox</h6>
-            <p>R$ 144</p>
-            <small>sass</small>
-            <small>sass</small>
-          </li>
-          <li>
-            <img src="../assets/expense.svg" alt="">
-            <h6>Dropbox</h6>
-            <p>R$ 144</p>
-            <small>sass</small>
-            <small>sass</small>
-          </li>
-          <li>
-            <img src="../assets/expense.svg" alt="">
-            <h6>Dropbox</h6>
-            <p>R$ 144</p>
-            <small>sass</small>
-            <small>sass</small>
-          </li>
-          <li>
-            <img src="../assets/expense.svg" alt="">
-            <h6>Dropbox</h6>
-            <p>R$ 144</p>
-            <small>sass</small>
-            <small>sass</small>
+            <a href="/transactions/dropbox" data-reset>
+              <img src="../assets/expense.svg" alt="">
+              <h6>Dropbox</h6>
+              <p>R$ 144</p>
+              <small>sass</small>
+              <small>sass</small>
+            </a>
           </li>
         </ul>
       </section>
     </main>
   </div>
-</body>
 
+  <div class="overlay settings-modal active">
+    <div class="modal">
+      <header>
+        <h2>
+          <strong>Configurations</strong>
+        </h2>
+      </header>
+
+      <section>
+        <summary><strong>Theme</strong></summary>
+
+        <div class="input-wrapper">
+          <label for="theme">Current Theme</label>
+
+          <select name="theme">
+            <option value="light">Light</option>
+            <option value="light">Dark</option>
+            <option value="light">Contrast</option>
+          </select>
+        </div>
+      </section>
+      
+
+      <footer>
+        <button data-action="cancel">Cancel</button>
+        <button data-action="confirm">Confirm</button>
+      </footer>
+    </div>
+  </div>
+</body>
 </html>

@@ -1,0 +1,114 @@
+.popIn {
+  animation: FadeInTop 400ms;
+}
+
+.popOut {
+  animation: FadeOutBottom 400ms;
+}
+
+.modal {
+  width: 40%;
+
+  display: flex;
+  flex-direction: column;
+
+  color: #fff;
+
+  row-gap: 1.2rem;
+
+  border-radius: 0.25rem;
+}
+
+.modal header {
+  padding: 0;
+}
+
+.modal section {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.input-wrapper {
+  width: 80%;
+
+  margin: auto;
+
+  
+  display: flex;
+  
+  align-items: center;
+  justify-content: space-between;
+}
+
+select {
+  padding: 1rem;
+  color: #fff;
+  background: var(--select-bg);
+  outline: 0;
+  border: 0;
+  border-radius: 0 !important;
+}
+
+.modal footer {
+  width: 100%;
+  
+  display: flex;
+
+  align-items: center;
+  justify-content: space-around;
+}
+
+footer button {
+  color: #fff;
+}
+
+footer button[data-action="cancel"] {
+  background: var(--red);
+}
+
+footer button[data-action="cancel"]:hover,
+footer button[data-action="cancel"]:focus {
+  background: var(--soft-red);
+}
+
+footer button[data-action="confirm"] {
+  background: var(--green);
+}
+
+footer button[data-action="confirm"]:hover,
+footer button[data-action="confirm"]:focus {
+  background: var(--soft-green);
+}
+
+@keyframes FadeInTop {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-12px);
+  }
+  
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@keyframes FadeOutBottom {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-12px);
+  }
+}

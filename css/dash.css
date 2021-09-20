@@ -186,6 +186,13 @@ main {
 
 #transactions h3 span {
   color: var(--accent-light);
+
+  transition: all 200ms ease;
+}
+
+#transactions h3 a:hover span,
+#transactions h3 a:focus span {
+  filter: brightness(2);
 }
 
 #transactions ul {
@@ -206,6 +213,10 @@ main {
 
 #transactions ul li {
   width: 100%;
+}
+
+#transactions ul a {
+  width: 100%;
 
   margin: auto;
 
@@ -224,16 +235,32 @@ main {
 
   padding: 1rem 0;
 
+  --card-transition: all 400ms;
+
   border-bottom: 1px solid #44444458;
+
+  transition: var(--card-transition);
+}
+
+#transactions ul a:hover,
+#transactions ul a:focus {
+  border-color: var(--accent-light);
 }
 
 #transactions ul li img {
   grid-area: img;
-
+  
   padding: 0.6rem;
   background: var(--body-bg);
-
+  
   border-radius: 0.4rem;
+
+  transition: var(--card-transition);
+}
+
+#transactions ul a:hover img,
+#transactions ul a:focus img {
+  background: var(--foreground-bg);
 }
 
 #transactions {
@@ -242,11 +269,25 @@ main {
 
 #transactions ul li h6 {
   font-size: inherit;
+
+  transition: var(--card-transition);
+}
+
+#transactions ul a:hover h6,
+#transactions ul a:focus h6 {
+  color: var(--accent-light);
 }
 
 #transactions ul li p {
   font-size: inherit;
-  color: #E6492D;
+  color: var(--red);
+
+  transition: var(--card-transition);
+}
+
+#transactions ul a:hover p,
+#transactions ul a:focus p {
+  color: var(--soft-red);
 }
 
 #transactions ul li small {
