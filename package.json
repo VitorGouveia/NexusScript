@@ -1,15 +1,43 @@
 {
-  "name": "investhub",
+  "name": "financehub",
   "version": "0.0.1",
-  "description": "InvestHub allows for you to have full control over your finances",
-  "author": "Vitor Neves Gomes Gouveia <vitor.gouveia@aluno.etecjrm.com.br>",
+  "description": "FinanceHub is an app made to facilitate your financial life",
+  "main": "index.js",
+  "repository": "https://github.com/VitorGouveia/maratona-discover.git",
+  "author": "VitorGouveia <vitor.gouveia@aluno.etecjrm.com.br>",
   "license": "MIT",
   "private": true,
   "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
     "commit": "cz"
   },
+  "dependencies": {
+    "next": "11.1.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
   "devDependencies": {
-    "cz-conventional-changelog": "^3.3.0"
+    "@types/react": "17.0.24",
+    "@types/styled-components": "^5.1.14",
+    "@typescript-eslint/eslint-plugin": "^4.31.2",
+    "@typescript-eslint/parser": "^4.31.2",
+    "babel-plugin-inline-react-svg": "^2.0.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "5.16.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-next": "11.1.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.26.0",
+    "next-compose-plugins": "^2.2.1",
+    "next-images": "^1.8.1",
+    "next-pwa": "^5.3.1",
+    "prettier": "^2.4.1",
+    "styled-components": "^5.3.1",
+    "typescript": "4.4.3"
   },
   "config": {
     "commitizen": {
