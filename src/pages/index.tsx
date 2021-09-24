@@ -51,7 +51,7 @@ const Home: FC = () => {
         </Progress>
 
         <ButtonContainer>
-          <Button variant="primary" onClick={() => setStep(step + 1)}>
+          <Button variant="primary" click={() => setStep(step + 1)}>
             Ok, next.
             <Arrow />
           </Button>

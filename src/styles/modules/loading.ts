@@ -110,7 +110,7 @@ export const LogoBackground = styled.div`
 
   padding: ${(props) => props.theme.padding.sm};
 
-  background: ${(props) => props.theme.accent[100]};
+  background: ${(props) => props.theme.accent[200]};
 
   @media screen and (prefers-reduced-motion) {
     h1 {

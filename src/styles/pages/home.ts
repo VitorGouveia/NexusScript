@@ -10,6 +10,9 @@ export const HomeContainer = styled.main`
 
 export const MainSection = styled.section`
   width: 100%;
+  max-width: 1200px;
+
+  margin: auto;
   height: 100%;
 
   display: grid;
@@ -17,14 +20,15 @@ export const MainSection = styled.section`
   grid-template-areas:
     'img'
     '.'
-    '.'
     'title'
     'description'
     'progress'
     'button';
-  grid-template-rows: 40vh 10vh repeat(3, min-content);
+  grid-template-rows: min-content 10vh repeat(4, min-content);
 
-  padding: 0 clamp(2rem, 12vw, 4rem);
+  place-content: center;
+
+  padding: 2rem clamp(2rem, 12vw, 4rem);
 `
 
 export const Title = styled.h1`
@@ -39,7 +43,7 @@ export const Description = styled.p`
   margin-top: 1rem;
   line-height: 16px;
 
-  font-size: clamp(0.5em, 0.3379rem + 0.8vw, 1rem);
+  font-size: clamp(0.8em, 0.3379rem + 0.8vw, 1rem);
 `
 
 export const Progress = styled.div`
@@ -49,7 +53,7 @@ export const Progress = styled.div`
   align-items: center;
   justify-content: center;
 
-  padding: 2rem 0;
+  padding: max(10vh, 2rem) 0;
 
   gap: 0.4rem;
 `
@@ -67,7 +71,7 @@ export const Dot = styled.span<DotProps>`
   ${(props) =>
     props.active
       ? css`
-          background: ${props.theme.accent[100]};
+          background: ${props.theme.accent[200]};
         `
       : css`
           background: ${props.theme.gray[100]};
