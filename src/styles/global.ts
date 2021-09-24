@@ -5,6 +5,7 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "DM Sans";
   }
 
   html,
@@ -13,7 +14,8 @@ export default createGlobalStyle`
     width: 100%;
     height: 100%;
 
-    font: ${(props) => props.theme.font.roboto};
+    font: ${(props) => props.theme.font.dm};
+
 
     color: ${(props) => props.theme.gray[100]};
     background: ${(props) => props.theme.gray[900]};

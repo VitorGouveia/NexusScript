@@ -1,6 +1,6 @@
 export const Theme = {
   font: {
-    roboto: '400 16px Roboto, sans-serif',
+    dm: '400 16px "DM Sans", sans-serif',
   },
 
   size: {

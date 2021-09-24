@@ -13,7 +13,7 @@ const loadingAnimation = css`
 `
 
 type ButtonProps = {
-  variant: 'primary' | 'secondary'
+  variant: 'primary' | 'secondary' | 'tertiary'
   isLoading: boolean
 }
 
@@ -38,10 +38,32 @@ export const ButtonContainer = styled.button<ButtonProps>`
     props.variant === 'primary'
       ? css`
           background: ${props.theme.accent[200]};
+          box-shadow: 0px 4px 16px #36319f;
+
+          span {
+            text-shadow: 0px 4px 16px rgba(171, 175, 212, 0.67);
+          }
         `
       : css`
-          border: 2px solid ${props.theme.accent[200]};
+          background: transparent;
+          border: 3px solid ${props.theme.accent[200]};
+
+          &:hover {
+            background: transparent;
+            border-color: ${props.theme.accent[100]};
+          }
         `}
+
+  ${(props) =>
+    props.variant === 'tertiary' &&
+    css`
+      border: 0;
+      background: ${props.theme.gray[800]};
+
+      &:hover {
+        background: ${props.theme.gray[700]};
+      }
+    `}
 
   ${(props) =>
     props.isLoading &&
@@ -66,17 +88,11 @@ export const ButtonContainer = styled.button<ButtonProps>`
         animation: loading 1s ease-out infinite;
       }
     `}
-
-  svg {
-    width: clamp(16px, 2vw, 24px);
-    height: auto;
-
-    margin-left: 2rem;
-  }
 `
 
 type ButtonTextProps = {
   isLoading: boolean
+  icon: boolean
 }
 
 export const ButtonText = styled.span<ButtonTextProps>`
@@ -85,12 +101,22 @@ export const ButtonText = styled.span<ButtonTextProps>`
 
   color: ${(props) => props.theme.gray[100]};
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   font-weight: bold;
   font-size: clamp(16px, 2vw, 24px);
 
   padding: clamp(0.5rem, 2vh, 1rem) clamp(1rem, 2vw, 2rem);
 
   transition: all 200ms;
+
+  ${(props) =>
+    props.icon &&
+    css`
+      justify-content: space-between;
+    `}
 
   ${(props) =>
     props.isLoading &&

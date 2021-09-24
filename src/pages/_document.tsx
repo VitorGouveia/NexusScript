@@ -43,13 +43,14 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
 
-          <link
-            href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"
-            rel="stylesheet"
-          />
-
           <link rel="icon" href="https://rocketseat.com.br/favicon.ico" />
 
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+            rel="stylesheet"
+          />
           <link
             href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap"
             rel="stylesheet"
