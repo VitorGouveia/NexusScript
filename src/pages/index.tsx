@@ -5,7 +5,7 @@ import Fingerprint from '../../public/fingerprint.svg'
 import Graph from '../../public/graph.svg'
 
 import { Loading } from '@modules/Loading'
-import { Button } from '@components'
+import { Button, Link } from '@components'
 import {
   HomeContainer,
   MainSection,
@@ -20,12 +20,22 @@ import {
 } from '@styles/pages/home'
 
 const Home: FC = () => {
+  const [isFirstTime, setIsFirstTime] = useState(false)
+
   const [isLoading, setIsLoading] = useState(false)
   const loadingDelay = 700
 
   const [step, setStep] = useState(0)
 
   useEffect(() => {
+    const isUserFirstTime = localStorage.getItem('isFirstTime') === 'true'
+
+    if (isUserFirstTime) {
+      setIsFirstTime(true)
+      setStep(2)
+    }
+
+    localStorage.setItem('isFirstTime', 'true')
     setIsLoading(true)
 
     setTimeout(() => setIsLoading(false), loadingDelay)
@@ -97,13 +107,21 @@ const Home: FC = () => {
             </Button>
           ) : (
             <>
-              <Button variant="secondary">Log in</Button>
-              <Button variant="tertiary">
-                <Fingerprint />
-              </Button>
-              <Button data-button="register" variant="primary">
-                Create My Account
-              </Button>
+              <Link href="/login">
+                <Button variant="secondary">Log in</Button>
+              </Link>
+
+              <Link href="/fingerprint">
+                <Button variant="tertiary">
+                  <Fingerprint />
+                </Button>
+              </Link>
+
+              <Link href="/register">
+                <Button data-button="register" variant="primary">
+                  Create My Account
+                </Button>
+              </Link>
             </>
           )}
         </ButtonContainer>
