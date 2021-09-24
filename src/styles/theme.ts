@@ -5,6 +5,7 @@ export const Theme = {
 
   size: {
     logo: '72px',
+    h1: 'clamp(1rem,0.7802rem + 3vw, 3.125rem)',
   },
 
   padding: {
@@ -23,6 +24,7 @@ export const Theme = {
 
   gray: {
     100: '#fafafa',
+    700: '#8C8C8C',
     800: '#323234',
     900: '#19191A',
   },

@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import { HomeContainer, LogoBackground } from '@styles/pages/home'
+import { LogoContainer, LogoBackground } from '@styles/modules/loading'
 
 type LoadingProps = {
   show: boolean
@@ -8,10 +8,10 @@ type LoadingProps = {
 
 export const Loading: FC<LoadingProps> = ({ show }) => {
   return (
-    <HomeContainer show={show}>
+    <LogoContainer show={show}>
       <LogoBackground>
         <h1>$</h1>
       </LogoBackground>
-    </HomeContainer>
+    </LogoContainer>
   )
 }

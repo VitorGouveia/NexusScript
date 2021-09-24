@@ -18,4 +18,23 @@ export default createGlobalStyle`
     color: ${(props) => props.theme.gray[100]};
     background: ${(props) => props.theme.gray[900]};
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: ${(props) => props.theme.gray[100]};
+  }
+
+  p {
+    color: ${(props) => props.theme.gray[700]}
+  }
+
+  button {
+    border: 0;
+    outline: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 `
