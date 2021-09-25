@@ -75,8 +75,6 @@ export const Description = styled.p`
 
   margin-top: 1rem;
   line-height: 16px;
-
-  font-size: clamp(0.8em, 0.3379rem + 0.8vw, 1rem);
 `
 
 export const Progress = styled.div`

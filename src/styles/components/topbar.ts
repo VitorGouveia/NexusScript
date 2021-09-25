@@ -7,8 +7,5 @@ export const Navabar = styled.nav`
   align-items: center;
   justify-content: space-between;
 
-  position: absolute;
-  top: 0;
-
   /* padding: clamp(1rem, 2vw, 2rem); */
 `

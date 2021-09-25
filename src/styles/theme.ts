@@ -6,6 +6,8 @@ export const Theme = {
   size: {
     logo: '72px',
     h1: 'clamp(1rem,0.7802rem + 3vw, 3.125rem)',
+    p: 'clamp(0.8em, 0.3379rem + 0.8vw, 1rem)',
+    small: 'clamp(12px, 0.8vw, 16px)',
   },
 
   padding: {
