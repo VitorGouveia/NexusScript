@@ -25,6 +25,17 @@ export const InputElement = styled.input<InputElementProps>`
   z-index: 10;
   color: ${(props) => props.theme.gray[700]};
 
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:active,
+  &:-webkit-autofill:focus {
+    caret-color: ${(props) => props.theme.accent[200]};
+    background-color: ${(props) => props.theme.gray[900]} !important;
+    color: ${(props) => props.theme.gray[100]} !important;
+    -webkit-box-shadow: 0 0 0 1000px ${(props) => props.theme.gray[900]} inset !important;
+    -webkit-text-fill-color: ${(props) => props.theme.gray[100]} !important;
+  }
+
   ${(props) =>
     props.short &&
     css`

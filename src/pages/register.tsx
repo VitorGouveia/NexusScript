@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 import { ArrowLeft } from 'react-feather'
 import Fingerprint from '../../public/fingerprint.svg'
 
@@ -25,6 +25,13 @@ const register: FC = () => {
       setCodeValue(`${codeValue}${number}`)
     }
   }
+
+  useEffect(() => {
+    if (codeValue.length === 6) {
+      /* verify the code */
+      console.log('verify code!')
+    }
+  }, [codeValue])
 
   return (
     <RegisterContainer>
@@ -85,7 +92,7 @@ const register: FC = () => {
             <button onClick={() => setNumpadValue(8)}>8</button>
             <button onClick={() => setNumpadValue(9)}>9</button>
             <button></button>
-            <button onClick={() => setNumpadValue(1)}>0</button>
+            <button onClick={() => setNumpadValue(0)}>0</button>
             <button
               onClick={() =>
                 setCodeValue(`${codeValue.substring(0, codeValue.length - 1)}`)
@@ -104,19 +111,23 @@ const register: FC = () => {
           </Terms>
         )}
 
-        <Button
-          variant="primary"
-          onClick={() => {
-            if (!!email !== false) {
-              setVerificationCodeSent(true)
-            } else {
-              /* do something */
-              /* check for errors */
-            }
-          }}
-        >
-          Send Verification Code
-        </Button>
+        {verificationCodeSent ? (
+          <></>
+        ) : (
+          <Button
+            variant="primary"
+            onClick={() => {
+              if (!!email !== false) {
+                setVerificationCodeSent(true)
+              } else {
+                /* do something */
+                /* check for errors */
+              }
+            }}
+          >
+            Send Verification Code
+          </Button>
+        )}
       </MainSection>
     </RegisterContainer>
   )
