@@ -1,6 +1,8 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
+import { ArrowLeft } from 'react-feather'
+import Fingerprint from '../../public/fingerprint.svg'
 
-import { Button, Topbar, Input } from '@components'
+import { Button, Topbar, Input, Link } from '@components'
 
 import {
   MainSection,
@@ -8,30 +10,82 @@ import {
   Form,
   Terms,
   Title,
+  Pinpad,
 } from '@styles/pages/register'
 
 const register: FC = () => {
+  const [verificationCodeSent, isVerificationCodeSent] = useState(false)
+  const [codeValue, setCodeValue] = useState('')
+
   return (
     <RegisterContainer>
       <MainSection>
-        <Topbar />
+        <Topbar back="/" />
 
         <Title>
-          <h1>Register</h1>
-          <p>Choose a country code and enter your phone number</p>
+          {verificationCodeSent ? (
+            <>
+              <h1>Verification</h1>
+              <p>Enter the verification code we sent to your phone</p>
+            </>
+          ) : (
+            <>
+              <h1>Register</h1>
+              <p>Choose a country code and enter your e-mail</p>
+            </>
+          )}
         </Title>
 
-        <Form>
-          <Input placeholder="Nome" name="name" type="text" />
+        <Form sideways={verificationCodeSent}>
+          {verificationCodeSent ? (
+            <>
+              <Input
+                value={codeValue}
+                noLabel
+                placeholder="1"
+                name="digit1"
+                type="string"
+              />
+            </>
+          ) : (
+            <Input placeholder="E-mail" name="email" type="email" />
+          )}
         </Form>
 
-        <Terms>
-          By submitting this application you confirm that you are authorized to
-          share this information and agree with our{' '}
-          <span>Term and Conditions</span>
-        </Terms>
+        {verificationCodeSent ? (
+          <Pinpad>
+            <button onClick={() => setCodeValue(`${codeValue}1`)}>1</button>
+            <button onClick={() => setCodeValue(`${codeValue}2`)}>2</button>
+            <button onClick={() => setCodeValue(`${codeValue}3`)}>3</button>
+            <button onClick={() => setCodeValue(`${codeValue}4`)}>4</button>
+            <button onClick={() => setCodeValue(`${codeValue}5`)}>5</button>
+            <button onClick={() => setCodeValue(`${codeValue}6`)}>6</button>
+            <button onClick={() => setCodeValue(`${codeValue}7`)}>7</button>
+            <button onClick={() => setCodeValue(`${codeValue}8`)}>8</button>
+            <button onClick={() => setCodeValue(`${codeValue}9`)}>9</button>
+            <button></button>
+            <button onClick={() => setCodeValue(`${codeValue}0`)}>0</button>
+            <button
+              onClick={() =>
+                setCodeValue(`${codeValue.substring(0, codeValue.length - 1)}`)
+              }
+            >
+              <ArrowLeft />
+            </button>
+          </Pinpad>
+        ) : (
+          <Terms>
+            By submitting this application you confirm that you are authorized
+            to share this information and agree with our{' '}
+            <span>
+              <Link href="#">Term and Conditions</Link>
+            </span>
+          </Terms>
+        )}
 
-        <Button variant="primary">Send Verification Code</Button>
+        <Button variant="primary" onClick={() => isVerificationCodeSent(true)}>
+          Send Verification Code
+        </Button>
       </MainSection>
     </RegisterContainer>
   )

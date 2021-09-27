@@ -1,4 +1,5 @@
-import { FC, InputHTMLAttributes } from 'react'
+import { FC, InputHTMLAttributes, useState } from 'react'
+import PhoneInput from 'react-phone-input-2'
 
 import {
   InputContainer,
@@ -9,14 +10,29 @@ import {
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string
+  noLabel?: boolean
 }
 
-export const Input: FC<InputProps> = ({ name, placeholder, ...rest }) => {
+export const Input: FC<InputProps> = ({
+  name,
+  placeholder,
+  noLabel,
+  ...rest
+}) => {
   return (
     <InputContainer>
-      <InputElement {...rest} id={name} />
-      <Label htmlFor={name}>{placeholder}</Label>
-      <Span />
+      {noLabel ? (
+        <>
+          <InputElement maxLength={6} short={noLabel} {...rest} id={name} />
+          <Span short={noLabel} />
+        </>
+      ) : (
+        <>
+          <InputElement {...rest} id={name} />
+          <Label htmlFor={name}>{placeholder}</Label>
+          <Span />
+        </>
+      )}
     </InputContainer>
   )
 }

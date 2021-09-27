@@ -1,13 +1,23 @@
 import { FC } from 'react'
 import { HelpCircle, ArrowLeft } from 'react-feather'
 
+import { Link } from '@components'
 import { Navabar } from '@styles/components/topbar'
 
-export const Topbar: FC = () => {
+type TopbarProps = {
+  back: string
+}
+
+export const Topbar: FC<TopbarProps> = ({ back }) => {
   return (
     <Navabar>
-      <ArrowLeft />
-      <HelpCircle />
+      <Link href={back}>
+        <ArrowLeft />
+      </Link>
+
+      <Link href="/help">
+        <HelpCircle />
+      </Link>
     </Navabar>
   )
 }
