@@ -18,6 +18,14 @@ const register: FC = () => {
   const [codeValue, setCodeValue] = useState('')
   const [email, setEmail] = useState('')
 
+  const setNumpadValue = (number: number) => {
+    if (codeValue.length === 6) {
+      /* do error */
+    } else {
+      setCodeValue(`${codeValue}${number}`)
+    }
+  }
+
   return (
     <RegisterContainer>
       <MainSection>
@@ -67,17 +75,17 @@ const register: FC = () => {
 
         {verificationCodeSent ? (
           <Pinpad>
-            <button onClick={() => setCodeValue(`${codeValue}1`)}>1</button>
-            <button onClick={() => setCodeValue(`${codeValue}2`)}>2</button>
-            <button onClick={() => setCodeValue(`${codeValue}3`)}>3</button>
-            <button onClick={() => setCodeValue(`${codeValue}4`)}>4</button>
-            <button onClick={() => setCodeValue(`${codeValue}5`)}>5</button>
-            <button onClick={() => setCodeValue(`${codeValue}6`)}>6</button>
-            <button onClick={() => setCodeValue(`${codeValue}7`)}>7</button>
-            <button onClick={() => setCodeValue(`${codeValue}8`)}>8</button>
-            <button onClick={() => setCodeValue(`${codeValue}9`)}>9</button>
+            <button onClick={() => setNumpadValue(1)}>1</button>
+            <button onClick={() => setNumpadValue(2)}>2</button>
+            <button onClick={() => setNumpadValue(3)}>3</button>
+            <button onClick={() => setNumpadValue(4)}>4</button>
+            <button onClick={() => setNumpadValue(5)}>5</button>
+            <button onClick={() => setNumpadValue(6)}>6</button>
+            <button onClick={() => setNumpadValue(7)}>7</button>
+            <button onClick={() => setNumpadValue(8)}>8</button>
+            <button onClick={() => setNumpadValue(9)}>9</button>
             <button></button>
-            <button onClick={() => setCodeValue(`${codeValue}0`)}>0</button>
+            <button onClick={() => setNumpadValue(1)}>0</button>
             <button
               onClick={() =>
                 setCodeValue(`${codeValue.substring(0, codeValue.length - 1)}`)

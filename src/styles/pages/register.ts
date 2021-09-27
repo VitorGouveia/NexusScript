@@ -52,7 +52,7 @@ export const Form = styled.form<FormProps>`
   div {
     width: 100%;
 
-    *:not(label) {
+    input {
       width: 100%;
     }
   }
