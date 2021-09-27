@@ -14,13 +14,18 @@ import {
 } from '@styles/pages/register'
 
 const register: FC = () => {
-  const [verificationCodeSent, isVerificationCodeSent] = useState(false)
+  const [verificationCodeSent, setVerificationCodeSent] = useState(false)
   const [codeValue, setCodeValue] = useState('')
+  const [email, setEmail] = useState('')
 
   return (
     <RegisterContainer>
       <MainSection>
-        <Topbar back="/" />
+        {verificationCodeSent ? (
+          <Topbar onClick={() => setVerificationCodeSent(false)} back="#" />
+        ) : (
+          <Topbar back="/" />
+        )}
 
         <Title>
           {verificationCodeSent ? (
@@ -45,10 +50,18 @@ const register: FC = () => {
                 placeholder="1"
                 name="digit1"
                 type="string"
+                onChange={(event) => setCodeValue(event.target.value)}
               />
             </>
           ) : (
-            <Input placeholder="E-mail" name="email" type="email" />
+            <Input
+              required
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+              placeholder="E-mail"
+              name="email"
+              type="email"
+            />
           )}
         </Form>
 
@@ -83,7 +96,17 @@ const register: FC = () => {
           </Terms>
         )}
 
-        <Button variant="primary" onClick={() => isVerificationCodeSent(true)}>
+        <Button
+          variant="primary"
+          onClick={() => {
+            if (!!email !== false) {
+              setVerificationCodeSent(true)
+            } else {
+              /* do something */
+              /* check for errors */
+            }
+          }}
+        >
           Send Verification Code
         </Button>
       </MainSection>

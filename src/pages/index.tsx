@@ -117,10 +117,8 @@ const Home: FC = () => {
                 </Button>
               </Link>
 
-              <Link href="/register">
-                <Button data-button="register" variant="primary">
-                  Create My Account
-                </Button>
+              <Link data-button="register" href="/register">
+                <Button variant="primary">Create My Account</Button>
               </Link>
             </>
           )}

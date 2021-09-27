@@ -38,7 +38,9 @@ type FormProps = {
 }
 
 export const Form = styled.form<FormProps>`
-  width: 100%;
+  margin: auto;
+
+  width: 80%;
   height: 100%;
 
   display: flex;
@@ -47,12 +49,17 @@ export const Form = styled.form<FormProps>`
   align-items: center;
   justify-content: center;
 
-  ${(props) =>
-    props.sideways &&
-    css`
-      flex-direction: row;
-      justify-content: space-between;
-    `}
+  div {
+    width: 100%;
+
+    *:not(label) {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `
 
 export const Terms = styled.small`
@@ -120,7 +127,7 @@ export const Pinpad = styled.div`
   button {
     color: ${(props) => props.theme.gray[100]};
     background: transparent;
-    font-size: 32px;
+    font-size: clamp(0.2rem, 0.8364rem + 0.9697vw, 2rem);
     transition: all 200ms;
 
     &:hover,

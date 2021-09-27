@@ -153,7 +153,9 @@ export const ButtonContainer = styled.section<ButtonContainerProps>`
 
       gap: 1rem;
 
+      a,
       button {
+        width: 100%;
         height: 100%;
       }
 

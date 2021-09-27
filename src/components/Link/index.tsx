@@ -7,8 +7,10 @@ interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {}
 
 export const Link: FC<LinkProps> = ({ children, href, ...rest }) => {
   return (
-    <Anchor {...rest} href={href || ''}>
-      <A href={href}>{children}</A>
+    <Anchor href={href || ''}>
+      <A {...rest} href={href}>
+        {children}
+      </A>
     </Anchor>
   )
 }

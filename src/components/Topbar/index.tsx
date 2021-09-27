@@ -6,12 +6,13 @@ import { Navabar } from '@styles/components/topbar'
 
 type TopbarProps = {
   back: string
+  onClick?: () => void
 }
 
-export const Topbar: FC<TopbarProps> = ({ back }) => {
+export const Topbar: FC<TopbarProps> = ({ back, ...rest }) => {
   return (
     <Navabar>
-      <Link href={back}>
+      <Link {...rest} href={back}>
         <ArrowLeft />
       </Link>
 
