@@ -24,9 +24,12 @@ export const HomeContainer = styled.main`
 
 type MainSectionProps = {
   step: number
+  show: boolean
 }
 
 export const MainSection = styled.section<MainSectionProps>`
+  opacity: 0;
+
   width: min(100%, 800px);
   max-width: 1200px;
 
@@ -49,6 +52,14 @@ export const MainSection = styled.section<MainSectionProps>`
   place-content: center;
 
   padding: 2rem clamp(2rem, 12vw, 4rem);
+
+  transition: all 200ms;
+
+  ${(props) =>
+    props.show &&
+    css`
+      opacity: 1;
+    `}
 
   * {
     animation: 1.2s ${fadeIn} ease-out;

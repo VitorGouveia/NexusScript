@@ -1,8 +1,8 @@
 import { FC, useState, useEffect } from 'react'
+import Head from 'next/head'
 
 import Arrow from '../../public/arrow.svg'
 import Fingerprint from '../../public/fingerprint.svg'
-import Graph from '../../public/graph.svg'
 
 import { Loading } from '@modules/Loading'
 import { Button, Link } from '@components'
@@ -28,7 +28,8 @@ const Home: FC = () => {
   const [step, setStep] = useState(0)
 
   useEffect(() => {
-    const isUserFirstTime = localStorage.getItem('isFirstTime') === 'true'
+    const isUserFirstTime =
+      localStorage.getItem('isFirstTime') === 'true' || isFirstTime
 
     if (isUserFirstTime) {
       setIsFirstTime(true)
@@ -43,9 +44,13 @@ const Home: FC = () => {
 
   return (
     <HomeContainer>
-      {/* <Loading show={isLoading} /> */}
+      <Head>
+        <title>FinanceHub | Home</title>
+      </Head>
 
-      <MainSection step={step}>
+      <Loading show={isLoading} />
+
+      <MainSection show={!isLoading} step={step}>
         <ImgContainer>
           {step === 0 && (
             <img src="/welcome-1.png" alt="Image of 3 finance icons" />

@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from 'react'
+import Head from 'next/head'
 import { ArrowLeft } from 'react-feather'
 
-import { Loading } from '@modules/Loading'
 import { Button, Topbar, Input, Link, Select } from '@components'
 
 import {
@@ -14,7 +14,7 @@ import {
 } from '@styles/pages/register'
 
 const register: FC = () => {
-  const [step, setStep] = useState(2)
+  const [step, setStep] = useState(0)
   const [codeValue, setCodeValue] = useState('')
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
@@ -132,8 +132,11 @@ const register: FC = () => {
 
   return (
     <RegisterContainer>
+      <Head>
+        <title>FinanceHub | Register</title>
+      </Head>
       <MainSection>
-        {step === 1 ? (
+        {step > 0 ? (
           <Topbar onClick={() => setStep(step - 1)} back="#" />
         ) : (
           <Topbar back="/" />
@@ -172,7 +175,7 @@ const register: FC = () => {
             By submitting this application you confirm that you are authorized
             to share this information and agree with our{' '}
             <span>
-              <Link href="#">Term and Conditions</Link>
+              <Link href="#terms">Term and Conditions</Link>
             </span>
           </Terms>
         )}
@@ -200,7 +203,7 @@ const register: FC = () => {
               console.log('redirect!')
             }}
           >
-            Finish
+            <Link href="/dash">Finish</Link>
           </Button>
         )}
       </MainSection>

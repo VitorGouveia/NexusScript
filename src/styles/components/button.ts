@@ -106,9 +106,9 @@ export const ButtonText = styled.span<ButtonTextProps>`
   justify-content: center;
 
   font-weight: bold;
-  font-size: clamp(1rem, 0.9182rem + 0.4848vw, 1.5rem);
+  font-size: clamp(0.5rem, 0.4153rem + 0.904vw, 1.5rem);
 
-  padding: clamp(0.5rem, 2vh, 1rem) clamp(1rem, 2vw, 2rem);
+  padding: clamp(0.5rem, 0.4153rem + 0.904vw, 1.5rem) clamp(1rem, 2vw, 2rem);
 
   transition: all 200ms;
 

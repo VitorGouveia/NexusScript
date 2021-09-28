@@ -16,7 +16,7 @@ type InputElementProps = {
 }
 
 export const InputElement = styled.input<InputElementProps>`
-  font-size: 14px;
+  font-size: clamp(0.6rem, 0.1322rem + 0.7232vw, 1rem);
   border: 0;
   outline: 0;
   padding: 4px 0;
@@ -67,7 +67,7 @@ export const Label = styled.label`
   width: 100%;
   cursor: text;
   top: -16px;
-  font-size: 14px;
+  font-size: clamp(0.6rem, 0.1322rem + 0.7232vw, 1rem);
   font-weight: bold;
   transform: translateY(-50%);
   color: ${(props) => props.theme.gray[700]};
