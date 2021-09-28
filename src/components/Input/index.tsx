@@ -36,3 +36,36 @@ export const Input: FC<InputProps> = ({
     </InputContainer>
   )
 }
+
+export const Datalist: FC<InputProps> = ({
+  name,
+  placeholder,
+  noLabel,
+  children,
+  ...rest
+}) => {
+  return (
+    <InputContainer>
+      {noLabel ? (
+        <>
+          <InputElement
+            list={name}
+            maxLength={6}
+            short={noLabel}
+            {...rest}
+            id={name}
+          />
+          <datalist id={name}>{children}</datalist>
+          <Span short={noLabel} />
+        </>
+      ) : (
+        <>
+          <InputElement list={name} {...rest} id={name} />
+          <datalist id={name}>{children}</datalist>
+          <Label htmlFor={name}>{placeholder}</Label>
+          <Span />
+        </>
+      )}
+    </InputContainer>
+  )
+}

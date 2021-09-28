@@ -27,7 +27,6 @@ export default createGlobalStyle`
   }
 
   p, small {
-
     font-size: ${(props) => props.theme.size.p};
     color: ${(props) => props.theme.gray[700]}
   }

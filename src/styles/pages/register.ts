@@ -43,6 +43,8 @@ export const Form = styled.form<FormProps>`
   width: 80%;
   height: 100%;
 
+  row-gap: 4rem;
+
   display: flex;
   flex-direction: column;
 
