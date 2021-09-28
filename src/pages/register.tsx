@@ -2,7 +2,7 @@ import { FC, useEffect, useState } from 'react'
 import { ArrowLeft } from 'react-feather'
 
 import { Loading } from '@modules/Loading'
-import { Button, Topbar, Input, Link, Datalist } from '@components'
+import { Button, Topbar, Input, Link, Select } from '@components'
 
 import {
   MainSection,
@@ -96,7 +96,7 @@ const register: FC = () => {
             name="Date of Birth"
             type="date"
           />
-          <select
+          <Select
             value={gender}
             onChange={(event) => setGender(event.target.value)}
             required
@@ -107,7 +107,7 @@ const register: FC = () => {
             <option value="male">Male</option>
             <option value="non-binary">I don't want to tell</option>
             <option value="idk">I don't know yet</option>
-          </select>
+          </Select>
           <Input
             value={password}
             onChange={(event) => setPassword(event.target.value)}

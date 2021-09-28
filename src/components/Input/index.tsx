@@ -1,4 +1,4 @@
-import { FC, InputHTMLAttributes, useState } from 'react'
+import { FC, InputHTMLAttributes, SelectHTMLAttributes, useState } from 'react'
 import PhoneInput from 'react-phone-input-2'
 
 import {
@@ -6,6 +6,7 @@ import {
   InputElement,
   Label,
   Span,
+  SelectContainer,
 } from '@styles/components/input'
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -66,6 +67,25 @@ export const Datalist: FC<InputProps> = ({
           <Span />
         </>
       )}
+    </InputContainer>
+  )
+}
+
+interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {}
+
+export const Select: FC<SelectProps> = ({
+  children,
+  placeholder,
+  name,
+  ...rest
+}) => {
+  return (
+    <InputContainer>
+      <Label htmlFor={name}>{placeholder}</Label>
+      <SelectContainer id={name} {...rest}>
+        {children}
+      </SelectContainer>
+      <Span />
     </InputContainer>
   )
 }

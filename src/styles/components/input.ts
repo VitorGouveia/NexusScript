@@ -97,8 +97,38 @@ export const Span = styled.span<SpanProps>`
   transition: 0.4s;
 `
 
-export const Select = styled.select`
-  background: transparent;
-  outline: 0;
+export const SelectContainer = styled.select`
+  width: 100%;
+  height: 100%;
+
   border: 0;
+  outline: 0;
+
+  font-size: 14px;
+
+  padding: 4px 0 12px;
+
+  border-bottom: 1.5px solid ${(props) => props.theme.gray[700]};
+
+  color: ${(props) => props.theme.gray[700]};
+
+  background: transparent;
+
+  option {
+    background: ${(props) => props.theme.gray[800]};
+  }
+
+  &:focus {
+    & ~ label {
+      color: ${(props) => props.theme.accent[200]} !important;
+    }
+    & ~ span {
+      width: 100%;
+      transition: 0.4s;
+    }
+  }
+
+  & option:focus + label {
+    color: ${(props) => props.theme.accent[200]};
+  }
 `
