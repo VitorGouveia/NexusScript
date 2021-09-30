@@ -26,6 +26,17 @@ export const MainSection = styled.section`
   padding-bottom: calc(clamp(2rem, 12vw, 4rem) * 2);
 `
 
+export const FingerprintButtonContainer = styled.section`
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  place-items: center;
+  justify-content: center;
+
+  grid-area: finger;
+`
+
 export const FingerprintButton = styled.button`
   grid-area: finger;
 
