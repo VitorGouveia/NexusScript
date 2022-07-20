@@ -1,0 +1,12 @@
+{
+  "name": "@finances/old",
+  "packageManager": "yarn@3.2.1",
+  "type": "module",
+  "scripts": {
+    "dev": "parcel index.html --port 3000",
+    "build": "parcel build '*.html' --public-url ./"
+  },
+  "devDependencies": {
+    "parcel": "^2.6.2"
+  }
+}
