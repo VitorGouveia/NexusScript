@@ -1,0 +1,42 @@
+name: Deploy All Apps
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'apps/**'
+      - '.github/workflows/deploy.yml'
+
+jobs:
+  pwa:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node-version: [16.x]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Lint everything
+        run: yarn lint
+
+      - name: Build everything
+        run: yarn build
+
+      - name: Merge Apps into one
+        run: |
+          mkdir apps/beta/dist/alpha
+          mv apps/alpha/dist/* apps/beta/dist/alpha
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.4.0
+        with:
+          branch: production
+          folder: ./apps/beta/dist
