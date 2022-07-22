@@ -20,10 +20,6 @@ const nextConfig = {
 
   basePath: isGithubPages ? "/Finances" : "",
   assetPrefix: isGithubPages ? "/Finances/" : "",
-
-  compiler: {
-    styledComponents: true,
-  },
 };
 
 module.exports = withPlugins([modules, pwa], nextConfig);
