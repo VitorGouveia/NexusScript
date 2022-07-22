@@ -6,7 +6,7 @@ self.addEventListener("install", function (event) {
     (async () => {
       const cache = await caches.open(version + cacheName);
 
-      return cache.addAll(["/"]);
+      return cache.addAll([]);
     })()
   );
 

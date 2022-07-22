@@ -13,9 +13,9 @@ self.addEventListener("install", function (event) {
         })
       );
 
-      return cache.addAll(["/", "/offline"]);
+      return cache.addAll([]);
     })()
-  );
+  )i;
 
   self.skipWaiting();
 });
