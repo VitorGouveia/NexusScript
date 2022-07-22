@@ -10,12 +10,17 @@ const pwa = withPWA({
   },
 });
 
+// @ts-ignore
+const isGithubPages = process.env.GH_PAGES;
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  // assetPrefix: "/Finances/",
-  // basePath: "/Finances",
+
+  basePath: isGithubPages ? "/Finances" : "",
+  assetPrefix: isGithubPages ? "/Finances/" : "",
+
   compiler: {
     styledComponents: true,
   },
