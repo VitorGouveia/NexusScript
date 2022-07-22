@@ -1,8 +1,17 @@
+import path from "path";
 import { defineConfig } from "vite";
 
 // @ts-ignore
-const isGithubPagesDeploy = process.env.GH_PAGES;
+const isDEV = process.env.NODE_ENV === "production";
 
 export default defineConfig({
-  base: isGithubPagesDeploy ? "/Finances/" : "/beta",
+  base: isDEV ? "./" : "/beta",
+  build: {
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, "index.html"),
+        nested: path.resolve(__dirname, "nested/index.html"),
+      },
+    },
+  },
 });
