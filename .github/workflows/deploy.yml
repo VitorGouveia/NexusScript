@@ -34,6 +34,9 @@ jobs:
           mv apps/alpha/dist/* apps/stable/dist/alpha
           mv apps/beta/dist/* apps/stable/dist/beta
 
+      - name: Add .nojekyll file
+        run: touch ./apps/stable/dist/.nojekyll
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.4.0
         with:

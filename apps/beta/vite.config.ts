@@ -5,7 +5,7 @@ import { defineConfig } from "vite";
 const isDEV = process.env.NODE_ENV === "production";
 
 export default defineConfig({
-  base: isDEV ? "./" : "/beta",
+  base: isDEV ? "./" : "/Finances/beta",
   build: {
     rollupOptions: {
       input: {

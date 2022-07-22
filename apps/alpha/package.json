@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "parcel index.html --port 3000",
-    "build": "parcel build '*.html' --public-url /alpha"
+    "build": "parcel build '*.html' --public-url /Finances/alpha"
   },
   "devDependencies": {
     "parcel": "^2.6.2"
