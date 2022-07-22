@@ -4,5 +4,5 @@ import { defineConfig } from "vite";
 const isGithubPagesDeploy = process.env.GH_PAGES;
 
 export default defineConfig({
-  base: isGithubPagesDeploy ? "/Finances/" : "./",
+  base: isGithubPagesDeploy ? "/Finances/" : "/beta",
 });

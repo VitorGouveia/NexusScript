@@ -33,7 +33,9 @@ jobs:
       - name: Merge Apps into one
         run: |
           mkdir apps/beta/dist/alpha
-          mv apps/alpha/dist/* apps/beta/dist/alpha
+          mkdir apps/beta/dist/beta
+          mv apps/alpha/dist/* apps/stable/dist/alpha
+          mv apps/beta/dist/* apps/stable/dist/beta
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.4.0

@@ -1,0 +1,40 @@
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans";
+  }
+
+  html,
+  body,
+  #__next {
+    width: 100%;
+    height: 100%;
+
+    font: 400 16px "DM Sans", sans-serif;
+
+
+    color: #fafafa;
+    background: #19191A;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: #fafafa;
+  }
+
+  p, small {
+    font-size: clamp(0.8em, 0.3379rem + 0.8vw, 1rem);
+    color: #8C8C8C;
+  }
+
+  button {
+    border: 0;
+    outline: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }

@@ -1,0 +1,11 @@
+.a {
+  svg {
+    transition: all 200ms;
+  }
+
+  &:hover {
+    svg {
+      stroke: #4F47EB;
+    }
+  }
+}

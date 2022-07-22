@@ -15,15 +15,15 @@ window.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("blur", handleWindowBlur);
 });
 
-function getPWADisplayMode() {
-  const isStandalone = window.matchMedia("(display-mode: standalone)").matches;
-  if (document.referrer.startsWith("android-app://")) {
-    return "twa";
-  } else if (isStandalone) {
-    return "standalone";
-  }
-  return "browser";
-}
+// function getPWADisplayMode() {
+//   const isStandalone = window.matchMedia("(display-mode: standalone)").matches;
+//   if (document.referrer.startsWith("android-app://")) {
+//     return "twa";
+//   } else if (isStandalone) {
+//     return "standalone";
+//   }
+//   return "browser";
+// }
 
 // const unreadCount = 24;
 // navigator.setAppBadge(unreadCount).catch((error) => {

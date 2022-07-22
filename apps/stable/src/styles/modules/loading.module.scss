@@ -1,0 +1,100 @@
+.logoContainer {
+  position: absolute;
+
+  &[data-show="false"] {
+    @keyframes fadeContainerOut {
+      from {
+        opacity: 1;
+      }
+
+      to {
+        background: transparent;
+        opacity: 0;
+        z-index: -1;
+      }
+    }
+
+    animation: fadeContainerOut 200ms forwards;
+  }
+
+  &[data-show="true"] {
+    inset: 0;
+    margin: auto;
+  
+    background: #19191A;
+  }
+
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  place-items: center;
+}
+
+.logoBackground {
+  width: 96px;
+  height: 96px;
+
+  display: grid;
+  place-items: center;
+
+  h1 {
+    font-family: 'Lato';
+    font-weight: 900;
+    font-size: 72px;
+
+    @keyframes turnOnText {
+      0%,
+      18%,
+      22%,
+      25%,
+      53%,
+      57%,
+      100% {
+        text-shadow: 0px 0px 20px #ffffff;
+      }
+
+      20%,
+      24%,
+      55% {
+        text-shadow: none;
+      }
+    }
+
+    animation: turnOnText 1.5s infinite alternate;
+  }
+
+  @keyframes turnOnBackground {
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+      box-shadow: 0px 4px 16px #1526bb;
+    }
+
+    20%,
+    24%,
+    55% {
+      box-shadow: none;
+    }
+  }
+
+  animation: turnOnBackground 1.5s infinite alternate;
+
+  border-radius: 12px;
+
+  padding: 0.4rem;
+
+  background: #4F47EB;
+
+  @media screen and (prefers-reduced-motion) {
+    h1 {
+      animation: none;
+    }
+
+    animation: none;
+  }  
+}
