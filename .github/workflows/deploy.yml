@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install dependencies
-        run: yarn -O install
+        run: yarn
 
       - name: Build everything
         run: yarn build
