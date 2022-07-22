@@ -68,7 +68,7 @@ const setupPWA = async () => {
     const registration = await navigator.serviceWorker.register(
       "/Finances/beta/service-worker.js",
       {
-        scope: "/Finances/beta",
+        scope: "/Finances/beta/",
       }
     );
 
