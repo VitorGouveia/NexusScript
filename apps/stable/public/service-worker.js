@@ -1,4 +1,4 @@
-const cacheName = "dev.finance$";
+const cacheName = "finances-nextjs";
 const version = "v0.0.1";
 
 self.addEventListener("install", function (event) {
@@ -6,7 +6,7 @@ self.addEventListener("install", function (event) {
     (async () => {
       const cache = await caches.open(version + cacheName);
 
-      return cache.addAll([]);
+      return cache.addAll(["index.html"]);
     })()
   );
 
