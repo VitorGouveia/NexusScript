@@ -172,7 +172,8 @@ export default class CustomDocument extends Document {
                 if ("serviceWorker" in navigator) {
                   window.addEventListener("load", () => {
                     navigator.serviceWorker.register(
-                      "/Finances/service-worker.js"
+                      "/Finances/service-worker.js",
+                      { scope: "/Finances/" }
                     );
                   });
                 }    

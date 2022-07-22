@@ -9,7 +9,8 @@
   "theme_color": "#1B1B22",
   "orientation": "portrait",
   "id": "/",
-  "start_url": "/",
+  "scope": "/Finances/",
+  "start_url": "/Finances/",
   "icons": [
     {
       "src": "./icons/icon_512.svg",
