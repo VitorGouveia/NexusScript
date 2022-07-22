@@ -1,18 +1,8 @@
 // @ts-check
 const withPlugins = require("next-compose-plugins");
 const withModules = require("next-transpile-modules");
-const withPWA = require("next-pwa");
-const runtimeCaching = require("next-pwa/cache");
 
 const modules = withModules(["@finances/ui"]);
-const pwa = withPWA({
-  pwa: {
-    dest: "public",
-    scope: "/Finances",
-    subdomainPrefix: "/Finances",
-    runtimeCaching,
-  },
-});
 
 // @ts-ignore
 const isGithubPages = process.env.GH_PAGES;
@@ -26,4 +16,4 @@ const nextConfig = {
   assetPrefix: isGithubPages ? "/Finances/" : "",
 };
 
-module.exports = withPlugins([modules, pwa], nextConfig);
+module.exports = withPlugins([modules], nextConfig);

@@ -4,7 +4,7 @@
   "short_name": "Next.js Finances",
   "description": "Gerencie as suas finanças direto do seu celular, usando tecnologia PWA",
   "display": "standalone",
-  "display_override": "window-controls-overlay",
+  "display_override": ["window-controls-overlay"],
   "background_color": "#1B1B22",
   "theme_color": "#1B1B22",
   "orientation": "portrait",
