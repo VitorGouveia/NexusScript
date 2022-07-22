@@ -5,8 +5,8 @@ on:
     branches:
       - master
     paths:
-      - 'apps/**'
       - '.github/workflows/deploy.yml'
+      - 'apps/**'
 
 jobs:
   pwa:
