@@ -24,9 +24,6 @@ jobs:
       - name: Install dependencies
         run: yarn
 
-      - name: Lint everything
-        run: yarn lint
-
       - name: Build everything
         run: yarn build
 
@@ -41,4 +38,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4.4.0
         with:
           branch: production
-          folder: ./apps/beta/dist
+          folder: ./apps/stable/dist
