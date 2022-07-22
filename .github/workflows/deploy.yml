@@ -29,8 +29,8 @@ jobs:
 
       - name: Merge Apps into one
         run: |
-          mkdir apps/beta/dist/alpha
-          mkdir apps/beta/dist/beta
+          mkdir apps/stable/dist/alpha
+          mkdir apps/stable/dist/beta
           mv apps/alpha/dist/* apps/stable/dist/alpha
           mv apps/beta/dist/* apps/stable/dist/beta
 
