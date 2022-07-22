@@ -66,10 +66,7 @@ const setupPWA = async () => {
 
   try {
     const registration = await navigator.serviceWorker.register(
-      "/Finances/beta/service-worker.js",
-      {
-        scope: "/Finances/beta/",
-      }
+      new URL("./service-worker.js", import.meta.url)
     );
 
     if ("periodicSync" in registration) {
