@@ -13,7 +13,7 @@ const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
         const registration = await navigator.serviceWorker.register(
           "/Finances/service-worker.js",
           {
-            scope: "/Finances",
+            scope: "/Finances/",
           }
         );
 
