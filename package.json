@@ -1,49 +1,27 @@
 {
-  "name": "financehub",
-  "version": "0.0.1",
-  "description": "FinanceHub is an app made to facilitate your financial life",
-  "main": "index.js",
-  "repository": "https://github.com/VitorGouveia/maratona-discover.git",
-  "author": "VitorGouveia <vitor.gouveia@aluno.etecjrm.com.br>",
-  "license": "MIT",
+  "name": "finances",
+  "version": "0.0.0",
   "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "commit": "cz"
-  },
-  "dependencies": {
-    "next": "11.1.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@types/react": "17.0.24",
-    "@types/styled-components": "^5.1.14",
-    "@typescript-eslint/eslint-plugin": "^4.31.2",
-    "@typescript-eslint/parser": "^4.31.2",
-    "babel-plugin-inline-react-svg": "^2.0.1",
-    "cz-conventional-changelog": "^3.3.0",
-    "eslint": "5.16.0",
-    "eslint-config-google": "^0.14.0",
-    "eslint-config-next": "11.1.2",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.26.0",
-    "next-compose-plugins": "^2.2.1",
-    "next-images": "^1.8.1",
-    "next-pwa": "^5.3.1",
-    "prettier": "^2.4.1",
-    "react-feather": "^2.0.9",
-    "react-phone-input-2": "^2.14.0",
-    "styled-components": "^5.3.1",
-    "typescript": "4.4.3"
+    "@parcel/packager-raw-url": "2.6.2",
+    "@parcel/transformer-webmanifest": "2.6.2",
+    "eslint-config-custom": "*",
+    "prettier": "latest",
+    "turbo": "latest"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  }
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=14.0.0"
+  },
+  "packageManager": "yarn@3.2.1"
 }
