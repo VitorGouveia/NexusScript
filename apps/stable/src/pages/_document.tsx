@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import Script from "next/script";
 
 const getURL = (url: string) => {
   const isDev = process.env.NODE_ENV === "development";
@@ -161,6 +162,22 @@ export default class CustomDocument extends Document {
           <meta
             name="apple-mobile-web-app-status-bar-style"
             content="black-translucent"
+          />
+
+          <Script
+            id="service-worker"
+            strategy="beforeInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                if ("serviceWorker" in navigator) {
+                  window.addEventListener("load", () => {
+                    navigator.serviceWorker.register(
+                      "/Finances/service-worker.js"
+                    );
+                  });
+                }    
+              `,
+            }}
           />
         </Head>
         <body>

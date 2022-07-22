@@ -7,16 +7,6 @@ import Head from "next/head";
 import "@/styles/global.scss";
 
 const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
-  useEffect(() => {
-    if ("serviceWorker" in navigator) {
-      window.addEventListener("load", () => {
-        navigator.serviceWorker.register(
-          new URL("../service-worker.js", import.meta.url)
-        );
-      });
-    }
-  }, []);
-
   return (
     <Fragment>
       <Head>
