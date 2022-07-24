@@ -7,13 +7,13 @@ self.addEventListener("install", function (event) {
     (async () => {
       const cache = await caches.open(version + cacheName);
 
-      cache.add(
-        new Request(OFFLINE_URL, {
-          cache: "reload",
-        })
-      );
+      // cache.add(
+      //   new Request(OFFLINE_URL, {
+      //     cache: "reload",
+      //   })
+      // );
 
-      return cache.addAll([]);
+      return cache.addAll(["/Finances/beta/index.html"]);
     })()
   );
 

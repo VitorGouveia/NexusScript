@@ -16,7 +16,8 @@
   "theme_color": "#1B1B22",
   "orientation": "portrait",
   "id": "/",
-  "start_url": "/",
+  "start_url": "/Finances/beta",
+  "scope": "/Finances/beta",
   "related_applications": [
     {
       "platform": "webapp",
