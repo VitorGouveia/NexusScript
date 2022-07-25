@@ -8,7 +8,12 @@
     "preview": "NODE_ENV=production vite preview --port 3000"
   },
   "devDependencies": {
+    "babel-preset-solid": "^1.4.8",
     "typescript": "^4.6.4",
-    "vite": "^3.0.0"
+    "vite": "^3.0.0",
+    "vite-plugin-solid": "^2.3.0"
+  },
+  "dependencies": {
+    "solid-js": "^1.4.8"
   }
 }

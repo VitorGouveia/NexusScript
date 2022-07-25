@@ -1,17 +1,13 @@
-import path from "path";
 import { defineConfig } from "vite";
+import solidjs from "vite-plugin-solid";
 
 // @ts-ignore
-const isDEV = process.env.NODE_ENV === "production";
+const isDEV = process.env.NODE_ENV === "development";
 
 export default defineConfig({
+  plugins: [solidjs()],
   base: isDEV ? "./" : "/Finances/beta",
-  build: {
-    rollupOptions: {
-      input: {
-        main: path.resolve(__dirname, "index.html"),
-        nested: path.resolve(__dirname, "nested/index.html"),
-      },
-    },
+  server: {
+    port: 3000,
   },
 });

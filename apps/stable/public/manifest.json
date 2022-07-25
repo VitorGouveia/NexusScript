@@ -13,34 +13,17 @@
   "start_url": "/Finances/",
   "icons": [
     {
-      "src": "./icons/icon_512.svg",
+      "src": "./icons/icon512.png",
       "sizes": "512x512",
-      "purpose": "any"
-    },
-    {
-      "src": "./icons/icon_512-maskable.png",
-      "sizes": "512x512",
-      "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "./icons/icon_384.svg",
+      "src": "./icons/icon384.png",
       "sizes": "384x384",
-      "purpose": "any"
-    },
-    {
-      "src": "./icons/icon_384-maskable.png",
-      "sizes": "384x384",
-      "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "./icons/icon_192.svg",
-      "sizes": "192x192",
-      "purpose": "any"
-    },
-    {
-      "src": "./icons/icon_192-maskable.png",
+      "src": "./icons/icon_192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
