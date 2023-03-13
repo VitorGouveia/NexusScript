@@ -1,27 +1,10 @@
 {
-  "name": "finances",
-  "version": "0.0.0",
-  "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
-  "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
-  },
-  "devDependencies": {
-    "@parcel/packager-raw-url": "2.6.2",
-    "@parcel/transformer-webmanifest": "2.6.2",
-    "eslint-config-custom": "*",
-    "prettier": "latest",
-    "turbo": "latest"
-  },
-  "engines": {
-    "npm": ">=7.0.0",
-    "node": ">=14.0.0"
-  },
-  "packageManager": "yarn@3.2.1"
+  "name": "website-blocker",
+  "version": "0.0.1",
+  "description": "A browser extension that blocks websites. Unlimited productivity.",
+  "main": "index.js",
+  "repository": "https://github.com/VitorGouveia/WebsiteBlocker.git",
+  "author": "VitorGouveia <vitorneves.gouveia10@gmail.com>",
+  "license": "MIT",
+  "private": true
 }
