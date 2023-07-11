@@ -1,54 +1,37 @@
-# Astro Starter Kit: Basics
+<h1 align="center"> Flash </h1>
 
-```
-npm create astro@latest -- --template basics
-```
+<p align="center">
+  :zap: Create websites in seconds.
+  <br/>
+  <br/>
+  
+  <a href="https://www.producthunt.com/posts/screenity?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-screenity" target="_blank">
+    <img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=275308&theme=light&period=daily" alt="Flash - Create websites in seconds | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
+  </a>
+</p>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+#
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+<p align="center">
+  <img alt="projeto DevLinks" src="https://media.tenor.com/JMucL9NFRXoAAAAC/placeholder-text.gif" width="100%">
+</p>
 
-## 🚀 Project Structure
+[Get it now](https://getflash.vercel.app)
 
-Inside of your Astro project, you'll see the following folders and files:
+Flash is the new generation of site builders, build websites according to your need in a flash!
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- Fill in a form and your website is ready!
+- No credit card required.
+- Landing pages, VSLs, and more. Create all types of websites.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-Any static assets, like images, can be placed in the `public/` directory.
+Made by [Vitor Gouveia](https://github.com/vitorgouveia)
 
-## 🧞 Commands
+#
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Features
+😋 Fast and simple<br>
+😋 Professional results<br>
+😋 Limitless customization<br>
