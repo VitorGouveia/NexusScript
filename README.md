@@ -10,7 +10,6 @@
   </a>
 </p>
 
-
 #
 
 <p align="center">
@@ -25,13 +24,12 @@ Flash is the new generation of site builders, build websites according to your n
 - No credit card required.
 - Landing pages, VSLs, and more. Create all types of websites.
 
-
-
 Made by [Vitor Gouveia](https://github.com/vitorgouveia)
 
 #
 
 ## Features
+
 😋 Fast and simple<br>
 😋 Professional results<br>
 😋 Limitless customization<br>
